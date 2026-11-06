@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="container">
@@ -47,7 +48,7 @@
             <a class="btn btn-sm btn-warning" href="{%url 'login'%}">Login</a>
             <a class="btn btn-sm btn-outline-secondary ml-2" href="{%url 'register'%}">Register</a>
             {% else %}
-          <span>YOU ARE LOGED IN AS {{ user }}</span>
+          <span><a href="{% url 'dashboard' %}">Dashboard</a></span>
           &emsp;
           <span><a href="{% url 'logout' %}">Logout</a></span>
             {% endif %}
